@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2017-2022 Digi International Inc.
+* Copyright (C) 2017-2026, Digi International Inc.
 *
 * This Source Code Form is subject to the terms of the Mozilla Public
 * License, v. 2.0. If a copy of the MPL was not distributed with this file,
@@ -130,7 +130,9 @@
 #define CONNECTOR_SUBSCRIPTIONS_CAP_ENABLED
 #endif
 #ifdef CCIMP_CONTAINER_CAP_ENABLED
+#include "ccimp/ccimp_cap.h"
 #define CONNECTOR_CONTAINER_CAP_ENABLED
+#define CONNECTOR_CONTAINER_CAP_SUPPORTED() ccimp_container_cap_supported()
 #endif
 #ifdef CCIMP_MODEM_SIM_INFO_CAP_ENABLED
 #define CONNECTOR_MODEM_SIM_INFO_CAP_ENABLED
